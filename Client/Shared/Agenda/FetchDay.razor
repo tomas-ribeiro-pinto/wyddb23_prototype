@@ -1,0 +1,121 @@
+﻿@using BlazorWYDDB23.Shared.Models
+@using Microsoft.AspNetCore.Authorization
+@using BlazorWYDDB23.Shared
+@inject HttpClient Http
+@inject IStringLocalizer<resource> localizer
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+@if (dayList == null)
+{
+    <LoadingComponent></LoadingComponent>
+}
+else
+{
+    <div class="p-3">
+        <h1 class="text-center">@localizer["Agenda"]</h1>
+        @foreach (var day in dayList)
+        {
+            if (!IsDayEmpty(day.DayId))
+            {
+                <!--
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-4 mt-3">
+                            <div class="card" style="border-radius: 1em;">
+                                <div class="card-body bg-red" style="border-radius: 1em;">
+                                    <h5 class="card-title" style="font-size: 1em;">@day.Date.ToString("dd MMMM")</h5>
+                                    <h6 class="text-warning card-subtitle mb-2" style="font-size: 0.8em;">@day.Date.ToString("dddd")</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 mt-4">
+                            <div class="card bg-red border border-success" style="border-radius: 1.1em;border-color: var(--bs-green);">
+                                <div class="card-body text-center" style="height:4.2em;">
+                                    <h2 style="font-size: 1.3em;" class="card-title">@day.Date.ToString("dd MMMM")</h2>
+                                    <p class="text-warning card-subtitle" style="font-size: 0.8em; margin-top:-0.8em;">@day.Date.ToString("dddd")</p>
+                                </div>
+                                <div class="card-body bg-light rounded-top rounded-4">
+                                    @foreach (var dayEntry in GetDaySchedule(day.DayId))
+                                    {
+                                        <div class="row mt-2 text-dark">
+                                            <div class="col-3" style="border-right-style: dashed;border-right-color: var(--bs-green);">
+                                                <p class="text-secondary" style="text-align: right;">@dayEntry.Date.ToString("HH:mm")</p>
+                                            </div>
+                                            <div class="col">
+                                                <p><strong>@dayEntry.EntryTitle</strong></p>
+                                                <p style="margin-top: -1em;"><i class="bi bi-geo-alt-fill"></i>&nbsp;@dayEntry.Location</p>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+}
+
+@code {
+
+    @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+    protected List<DayEntry> dayEntryList;
+    protected List<Day> dayList;
+    private const string DayListName = "dayList";
+    private const string DayEntryListName = "dayEntryList";
+    private const string CacheDate = "CacheDate";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetAgenda();
+    }
+
+    protected async Task GetAgenda()
+    {
+        dayList = await localStorage.GetItemAsync<List<Day>>(DayListName);
+        dayEntryList = await localStorage.GetItemAsync<List<DayEntry>>(DayEntryListName);
+        DateTime? cacheDate = await localStorage.GetItemAsync<DateTime?>(CacheDate);
+        double totalMinutes = 0;
+
+        if (cacheDate != null)
+        {
+            totalMinutes = DateTime.UtcNow.Subtract((DateTime)cacheDate).TotalMinutes;
+        }
+
+        if(dayList == null || cacheDate == null || totalMinutes > 90)
+        {
+            try
+            {
+                dayList = (await Http.GetFromJsonAsync<List<Day>>("api/day")).OrderBy(d => d.Date).ToList();
+                dayEntryList = (await Http.GetFromJsonAsync<List<DayEntry>>("api/dayentry"));
+                await localStorage.SetItemAsync(DayListName, dayList);
+                await localStorage.SetItemAsync(DayEntryListName, dayEntryList);
+                await localStorage.SetItemAsync(CacheDate, DateTime.UtcNow);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+
+    public List<DayEntry> GetDaySchedule(int dayId)
+    {
+        return dayEntryList.Where(a => a.DayId == dayId).OrderBy(d => d.Date.TimeOfDay).ToList();
+    }
+
+    public bool IsDayEmpty(int dayId)
+    {
+        if (dayEntryList.Where(a => a.DayId == dayId).ToList().Count() == 0)
+            return true;
+        else
+            return false;
+    }
+}

@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.Extensions.Localization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>resource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\resource%28en%29.Designer.cs">
+      <DependentUpon>resource.en.resx</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\resource.en.Designer.cs">
+      <DependentUpon>resource.en.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Pt-En.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Pt-En.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\resource.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>resource.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Resources\resource%28en%29.resx">
+      <LastGenOutput>resource(en).Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,259 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/tomaspinto/Documents/GitHub/wyddb23/Server/BlazorWYDDB23.Server.csproj": {}
+  },
+  "projects": {
+    "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj": {
+      "version": "0.1.0",
+      "restore": {
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj",
+        "projectName": "BlazorWYDDB23.Client",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj",
+        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/x64/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj": {
+                "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.Extensions.Localization": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "/Users/tomaspinto/Documents/GitHub/wyddb23/Server/BlazorWYDDB23.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23/Server/BlazorWYDDB23.Server.csproj",
+        "projectName": "BlazorWYDDB23.Server",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Server/BlazorWYDDB23.Server.csproj",
+        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/x64/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj": {
+                "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj"
+              },
+              "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj": {
+                "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj",
+        "projectName": "BlazorWYDDB23.Shared",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj",
+        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/x64/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

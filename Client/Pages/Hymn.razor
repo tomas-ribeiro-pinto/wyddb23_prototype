@@ -1,0 +1,80 @@
+﻿@page "/hino"
+@inject IStringLocalizer<resource> localizer
+
+<h1 class="p-3 text-center">@localizer["Hino"]</h1>
+
+@try
+{
+    <div class="container h-100 d-inline justify-content-center align-items-center">
+        <p class="text-center"><iframe width="300" height="170" src="https://www.youtube.com/embed/H1x2t2EstlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    </div>
+}
+catch
+{
+    
+}
+
+<div class="text-center p-3" style="font-size:1.2em">
+    <p>De todo o mundo para este lugar,</p>
+    <p>Partimos, voámos, chegámos aqui.</p>
+    <p>Com Maria, ensaiamos um sim.</p>
+    <p>Queremos servir, fazer a vontade</p>
+    <p>Do Pai, nosso Pai.</p>
+    <p>Chamados a ser com Cristo Jesus,</p>
+    <p>Queremos dar, queremos estar,</p>
+    <p>Dispostos ao sim, fazer como a Mãe.</p>
+    <br />
+    <p class="text-decoration-underline text-red"><strong>@localizer["REFRÃO:"]</strong></p>
+    <p class="text-red"><strong>Todos vão ouvir a nossa voz,</strong></p>
+    <p class="text-red"><strong>Levantemos braços, há pressa no ar.</strong></p>
+    <p class="text-red"><strong>Jesus vive e não nos deixa sós:</strong></p>
+    <p class="text-red"><strong>Não mais deixaremos de amar.</strong></p>
+    <br />
+    <p>Tu que andas à procura de ti</p>
+    <p>Parte à descoberta, vem ver o que eu vi.</p>
+    <p>Vem connosco, vem olhar para além</p>
+    <p>Daquilo que fazes e que não te deixa</p>
+    <p>Sorrir e amar.</p>
+    <p>Não olhes para trás, não digas que não.</p>
+    <p>Ouve o teu coração,</p>
+    <p>E parte, sem medo, nesta missão.</p>
+    <br />
+    <p class="text-red"><strong>Todos vão ouvir a nossa voz,</strong></p>
+    <p class="text-red"><strong>Levantemos braços, há pressa no ar.</strong></p>
+    <p class="text-red"><strong>Jesus vive e não nos deixa sós:</strong></p>
+    <p class="text-red"><strong>Não mais deixaremos de amar.</strong></p>
+    <br />
+    <p>Foi Maria quem primeiro acolheu</p>
+    <p>A grande surpresa da vida sem fim.</p>
+    <p>Confiante e simples, quis receber</p>
+    <p>Tão grande mistério de um Deus que é</p>
+    <p>p’ra sempre / Por ti e por mim.</p>
+    <p>Não posso calar, não posso deixar</p>
+    <p>De dizer: “Meu Senhor,</p>
+    <p>Conta comigo, não mais calarei!”.</p>
+    <br />
+    <p class="text-red"><strong>Todos vão ouvir a nossa voz,</strong></p>
+    <p class="text-red"><strong>Levantemos braços, há pressa no ar.</strong></p>
+    <p class="text-red"><strong>Jesus vive e não nos deixa sós:</strong></p>
+    <p class="text-red"><strong>Não mais deixaremos de amar.</strong></p>
+    <br />
+    <p>Sem ter dúvidas da sua missão,</p>
+    <p>Maria, tão jovem, depressa deixou</p>
+    <p>Sua casa e p’la montanha subiu,</p>
+    <p>P’ra ver Isabel e logo encontrou</p>
+    <p>Saudação, comunhão.</p>
+    <p>O fruto é bendito, é o meu Senhor!</p>
+    <p>E eu também quero ouvir:</p>
+    <p>“Porque acreditaste, para sempre és feliz!”.</p>
+    <br />
+    <p class="text-red"><strong>Todos vão ouvir a nossa voz,</strong></p>
+    <p class="text-red"><strong>Levantemos braços, há pressa no ar.</strong></p>
+    <p class="text-red"><strong>Jesus vive e não nos deixa sós:</strong></p>
+    <p class="text-red"><strong>Não mais deixaremos de amar.</strong></p>
+    <br />
+</div>
+
+@code {
+
+}
+

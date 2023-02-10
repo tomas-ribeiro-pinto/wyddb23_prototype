@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <title>WYD DON BOSCO 23</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="wyddb23.Client.styles.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <link rel="apple-touch-startup-image" href="launch.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="launch.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="center-screen" style="margin: 0 auto; width: 100vw; height: 100vh; background-color: rgb(56,126,71);">
+            <div class="align-item-center justify-content-center vh-100 d-flex flex-column">
+                <div class="text-center pt-3" style="color: white; font-size: 16pt">
+                    A Carregar...
+                    <br />
+                    <div class="text-center mt-3">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                              style="font-size: 16pt; width: 36px; height: 36px; color: white" />
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <img src="/Images/wyd%20logo%20only.png" style="width:50%; max-width: 120px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        Ocorreu um erro inesperado!
+        <a href="" class="reload">Recarregar Página</a>
+        <a class="dismiss">X</a>
+    </div>
+    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src="cultureSelector.js"></script>
+</body>
+</html>
+

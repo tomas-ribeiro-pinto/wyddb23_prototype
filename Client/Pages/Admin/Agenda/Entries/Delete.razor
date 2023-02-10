@@ -1,0 +1,58 @@
+﻿@page "/admin/agenda/entry/delete/{dayID:int}/{entryID:int}"
+@using BlazorWYDDB23.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+<PageTitle>Apagar Entrada - @dayEntry.EntryTitle</PageTitle>
+
+<div class="p-3">
+    <h2>Apagar entrada</h2>
+    <br />
+    <div class="form-group">
+        <h4>Deseja realmente apagar esta entrada?</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><strong>Título</strong></td>
+                    <td>@dayEntry.EntryTitle</td>
+                </tr>
+                <tr>
+                    <td><strong>Hora</strong></td>
+                    <td>@dayEntry.Date.ToShortTimeString()</td>
+                </tr>
+                <tr>
+                    <td><strong>Local</strong></td>
+                    <td>@dayEntry.Location</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Apagar" @onclick="(async () => await RemoveDayEntry(dayEntry.DayEntryId))" class="btn btn-danger" />
+        <input type="submit" value="Cancelar" @onclick="(() => Cancel())" class="btn btn-warning" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int dayID { get; set; }
+
+    [Parameter]
+    public int entryID { get; set; }
+
+    DayEntry dayEntry = new DayEntry();
+    protected override async Task OnInitializedAsync()
+    {
+        dayEntry = await Http.GetFromJsonAsync<DayEntry>("/api/dayentry/" + Convert.ToInt32(entryID));
+    }
+    protected async Task RemoveDayEntry(int userID)
+    {
+        await Http.DeleteAsync("api/dayentry/" + entryID);
+        NavigationManager.NavigateTo("/admin/agenda/entry/" + dayID);
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/admin/agenda/entry/" + dayID);
+    }
+}

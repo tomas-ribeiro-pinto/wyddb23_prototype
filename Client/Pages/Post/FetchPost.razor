@@ -1,0 +1,113 @@
+﻿@page "/post"
+@using BlazorWYDDB23.Shared.Models
+@using Microsoft.AspNetCore.Authorization
+@using BlazorWYDDB23.Shared
+@inject HttpClient Http
+
+<h1>Publicações</h1>
+<div class="row">
+    <div class="col-md-6">
+        <a href='post/add' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Adicionar Publicação
+        </a>
+    </div>
+    <div class="input-group col">
+        <input type="text" class="form-control" placeholder="Search post by title"
+               @bind="SearchString" @bind:event="oninput" @onkeyup="FilterPost" />
+        @if (SearchString.Length > 0)
+        {
+            <div class="input-group-append">
+                <button class="btn btn-danger" @onclick="ResetSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        }
+    </div>
+</div>
+<br />
+@if (postList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in postList)
+            {
+                <tr>
+                    <td>@post.ID</td>
+                    <td>@post.Title</td>
+                    <td>@post.Message</td>
+                    <td>
+                        <a href='/post/edit/@post.ID' class="btn btn-outline-dark" role="button">
+                            Editar
+                        </a>
+                        <a href='/post/delete/@post.ID' class="btn btn-outline-danger" role="button">
+                            Remover
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+@code {
+
+    @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+    protected List<Post> postList = new();
+    protected List<Post> searchPostData = new();
+    protected Post post = new Post();
+    protected string SearchString { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await GetPost();
+        }
+
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    protected async Task GetPost()
+    {
+        postList = await Http.GetFromJsonAsync<List<Post>>("api/post");
+        searchPostData = postList;
+    }
+    protected void FilterPost()
+    {
+        if (!string.IsNullOrEmpty(SearchString))
+        {
+            postList = searchPostData
+                .Where(x => x.Title.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .ToList();
+        }
+        else
+        {
+            postList = searchPostData;
+        }
+    }
+    protected void DeleteConfirm(int userID)
+    {
+        post = postList.FirstOrDefault(x => x.ID == userID);
+    }
+    public void ResetSearch()
+    {
+        SearchString = string.Empty;
+        postList = searchPostData;
+    }
+}

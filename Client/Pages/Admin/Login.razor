@@ -1,0 +1,51 @@
+﻿@page "/login"
+@inject HttpClient httpClient
+@inject IStringLocalizer<resource> localizer
+@inject IJSRuntime js
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+
+<div class="p-3">
+    <div class="row">
+        <div class="mb-3 text-center">
+            <h3>Login</h3>
+            <h5 class="text-red"><strong>@localizer["Acesso autorizado apenas a staff"]</strong></h5>
+        </div>
+        <div class="mb-3">
+            <label>Utilizador</label>
+            <input @bind="loginRequest.UserName" class="form-control" placeholder="Utilizador" />
+        </div>
+        <div class="mb-3">
+            <label>Palavra-Passe</label>
+            <input @bind="loginRequest.Password" type="password" class="form-control" placeholder="Palavra-Passe" />
+        </div>
+        <div class="mb-3 d-grid gap-2">
+            <button @onclick="Authenticate" class="btn btn-warning">Login</button>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private LoginRequest loginRequest = new LoginRequest();
+
+    private async Task Authenticate()
+    {
+        var loginResponse = await httpClient.PostAsJsonAsync<LoginRequest>("/api/Account/Login", loginRequest);
+
+        if (loginResponse.IsSuccessStatusCode)
+        {
+            var userSession = await loginResponse.Content.ReadFromJsonAsync<UserSession>();
+            var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+            await customAuthStateProvider.UpdateAuthenticationState(userSession);
+            navManager.NavigateTo("/admin/agenda", true);
+        }
+        else if (loginResponse.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            await js.InvokeVoidAsync("alert", "Invalid User Name or Password");
+            return;
+        }
+    }
+
+}
+

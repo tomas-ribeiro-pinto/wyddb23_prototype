@@ -1,0 +1,65 @@
+﻿@using BlazorWYDDB23.Shared.Models
+@using Microsoft.AspNetCore.Authorization
+@using BlazorWYDDB23.Shared
+@inject HttpClient Http
+
+@if (dayList == null)
+{
+    <LoadingComponent></LoadingComponent>
+}
+else if(dayList.Count == 0)
+{
+    <div class="col-6 col-lg-3 col-6 mb-3">
+        <div class="card rounded-4">
+            <div class="card-body shadow bg-dark rounded-4">
+                <h2 class="mt-3 text-center">Lista de dias vazia</h2>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    @foreach (var day in dayList)
+        {
+        <div class="col-6 col-lg-3 col-6 mb-3">
+            <div class="card rounded-4">
+                <div class="card-body shadow bg-green rounded-4">
+                    <a href='/admin/agenda/day/delete/@day.DayId' class="btn btn-danger border rounded-pill float-end rounded-4" role="button" style="margin-top: -2em;margin-right: -2em;">
+                        <svg class="bi bi-x-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 21px;">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
+                        </svg>
+                    </a>
+                    <a class="card-link card-block stretched-link text-decoration-none text-white" href="/admin/agenda/entry/@day.DayId">
+                        <h2 class="mt-3 text-center">@day.Date.ToString("dd")</h2>
+                        <h2 class="mt-3 text-center">@day.Date.ToString("MMMM")</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        }
+
+    }
+    @code {
+
+        @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+protected List<Day> dayList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await GetDay();
+        }
+
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    protected async Task GetDay()
+    {
+        dayList = (await Http.GetFromJsonAsync<List<Day>>("api/day")).OrderBy(a => a.Date).ToList();
+    }
+    }

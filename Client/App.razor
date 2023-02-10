@@ -1,0 +1,37 @@
+﻿@inject IStringLocalizer<resource> localizer
+
+<CascadingAuthenticationState>
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+            <NotAuthorized>
+                <div class="d-flex align-items-center justify-content-center vh-100">
+                    <div class="text-center">
+                        <h1 class="display-1 fw-bold"><i class="bi bi-sign-stop-fill"></i></h1>
+                        <p class="fs-3"> <span class="text-danger">Opps!</span> @localizer["Não Autorizado"]</p>
+                        <a href="/" class="btn btn-primary">@localizer["Voltar ao Início"]</a>
+                    </div>
+                </div>
+            </NotAuthorized>
+        </AuthorizeRouteView>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>@localizer["Página não encontrada"]</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <div class="d-flex align-items-center justify-content-center vh-100">
+                <div class="text-center">
+                    <h1 class="display-1 fw-bold">404</h1>
+                    <p class="fs-3"> <span class="text-danger">Opps!</span> @localizer["Página não encontrada"]</p>
+                    <p class="lead">
+                        @localizer["A página que está a tentar aceder não existe"]
+                    </p>
+                    <a href="/" class="btn btn-primary">@localizer["Voltar ao Início"]</a>
+                </div>
+            </div>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+</CascadingAuthenticationState>

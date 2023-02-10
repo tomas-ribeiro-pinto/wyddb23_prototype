@@ -1,0 +1,103 @@
+﻿@page "/admin/agenda/entry/{ID:int}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using BlazorWYDDB23.Shared
+
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager navManager
+
+<PageTitle>Entradas - @day.Date.ToString("dd/MM/yyyy")</PageTitle>
+
+
+<div class="p-3">
+    <h1>@day.Date.ToString("dd MMMM")</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <a href='/admin/agenda/entry/add/@ID' class="btn btn-primary" role="button">
+                <i class="fas fa-user-plus"></i>
+                Adicionar entrada na Agenda
+            </a>
+        </div>
+    </div>
+    <br />
+    @if (dayEntryList == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <table class="table table-striped align-middle table-bordered">
+            <thead class="table-success">
+                <tr>
+                    <th>Hora</th>
+                    <th>Título</th>
+                    <th>Localização</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dayEntry in dayEntryList)
+                {
+                    <tr>
+                        <td>@dayEntry.Date.ToShortTimeString()</td>
+                        <td>@dayEntry.EntryTitle</td>
+                        <td>@dayEntry.Location</td>
+                        <td>
+                            <a href='/admin/agenda/entry/edit/@ID/@dayEntry.DayEntryId' class="btn btn-outline-dark" role="button">
+                                Editar
+                            </a>
+                            <a href='/admin/agenda/entry/delete/@ID/@dayEntry.DayEntryId' class="btn btn-outline-danger" role="button">
+                                Remover
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+</div>
+
+@code {
+
+    [Parameter]
+    public int ID { get; set; }
+
+    protected List<DayEntry> dayEntryList = new();
+    protected Day day = new Day();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            day = await Http.GetFromJsonAsync<Day>("api/day/" + Convert.ToInt32(ID));
+        }
+        catch (Exception ex)
+        {
+            navManager.NavigateTo("/admin/agenda");
+        }
+
+        try
+        {
+            if (day is not null)
+            {
+                await GetDayEntry();
+            }
+            else
+            {
+                navManager.NavigateTo("/admin/agenda");
+            }
+        }
+
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    protected async Task GetDayEntry()
+    {
+        dayEntryList = await Http.GetFromJsonAsync<List<DayEntry>>("api/dayentry");
+        dayEntryList = dayEntryList.Where(a => a.DayId == ID).OrderBy(d => d.Date.TimeOfDay).ToList();
+    }
+}

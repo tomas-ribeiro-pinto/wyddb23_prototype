@@ -1,0 +1,49 @@
+﻿@page "/admin/agenda/day/delete/{dayId:int}"
+@using BlazorWYDDB23.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+<PageTitle>Apagar Dia - @day.Date.ToString("dd/MM/yyyy")</PageTitle>
+
+<div class="p-3">
+    <h2>Remover Dia</h2>
+    <br />
+    <div class="form-group">
+        <h4>Deseja apagar este dia?</h4>
+        <div class="alert alert-danger" role="alert">
+          Nota: Todas as entradas deste dia serão apagadas!
+        </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Data</td>
+                    <td>@day.Date</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Apagar" @onclick="(async () => await RemoveDay(day.DayId))" class="btn btn-danger" />
+        <input type="submit" value="Cancelar" @onclick="(() => Cancel())" class="btn btn-warning" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int dayId { get; set; }
+    Day day = new Day();
+    protected override async Task OnInitializedAsync()
+    {
+        day = await Http.GetFromJsonAsync<Day>("/api/day/" + Convert.ToInt32(dayId));
+    }
+    protected async Task RemoveDay(int userID)
+    {
+        await Http.DeleteAsync("api/day/" + dayId);
+        NavigationManager.NavigateTo("/admin/agenda");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/admin/agenda");
+    }
+}

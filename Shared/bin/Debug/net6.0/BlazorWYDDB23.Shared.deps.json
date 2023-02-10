@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BlazorWYDDB23.Shared/1.0.0": {
+        "runtime": {
+          "BlazorWYDDB23.Shared.dll": {}
+        },
+        "resources": {
+          "en/BlazorWYDDB23.Shared.resources.dll": {
+            "locale": "en"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlazorWYDDB23.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

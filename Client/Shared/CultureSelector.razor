@@ -1,0 +1,41 @@
+﻿<select class="form-control bg-transparent text-light text-decoration-underline" style="width:auto;" @bind="Culture">
+    @foreach (var culture in cultures)
+    {
+        <option value="@culture">@culture.DisplayName.ToUpper()</option>
+    }
+</select>
+
+@code {
+
+    @using Microsoft.AspNetCore.Components;
+    @using Microsoft.JSInterop;
+    @using System.Globalization;
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    CultureInfo[] cultures = new[]
+    {
+        new CultureInfo("pt"),
+        new CultureInfo("en")
+    };
+
+    CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                var js = (IJSInProcessRuntime)JSRuntime;
+                js.InvokeVoid("blazorCulture.set", value.Name);
+
+                NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
+            }
+        }
+    }
+}
+

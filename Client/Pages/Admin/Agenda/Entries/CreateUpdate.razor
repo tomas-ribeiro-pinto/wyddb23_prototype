@@ -1,0 +1,117 @@
+﻿@page "/admin/agenda/entry/add/{dayID:int}"
+@page "/admin/agenda/entry/edit/{dayID:int}/{entryID:int}"
+@using BlazorWYDDB23.Shared.Models
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+<PageTitle>@Title Entrada - Admin</PageTitle>
+
+<div class="p-3">
+    <h1>@Title Entrada</h1>
+    <hr />
+    <EditForm Model="@Entry" OnValidSubmit="SaveDayEntry">
+        <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="EntryTitle" class="form-label">Título Entrada</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="Entry.EntryTitle" />
+            </div>
+            <ValidationMessage For="@(() => Entry.EntryTitle)" />
+        </div>
+        <div class="mb-3">
+            <label for="Location" class="form-label">Local</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="Entry.Location" />
+            </div>
+            <ValidationMessage For="@(() => Entry.Location)" />
+        </div>
+        <div class="mb-3">
+            <label for="Date" class="form-label">Hora</label>
+            <div class="col-md-4">
+                <input type="time" class="form-control" @bind="Entry.Date" />
+            </div>
+            <ValidationMessage For="@(() => Entry.Date)" />
+        </div>
+        <div class="mb-3">
+            <p class="form-label">Dia</p>
+            <div class="col-md-4">
+                <InputSelect class="form-control" @bind-Value="Entry.DayId">
+                    @foreach (var day in dayList)
+                    {
+                        <option value="@day.DayId">@day.Date.ToLongDateString()</option>
+                    }
+                </InputSelect>
+            </div>
+            <ValidationMessage For="@(() => Entry.Day)" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+            <button class="btn btn-light" @onclick="Cancel">Cancelar</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+
+    [Parameter]
+    public int entryID { get; set; }
+
+    [Parameter]
+    public int dayID { get; set; }
+
+    protected string Title = "Adicionar";
+    public DayEntry Entry = new();
+    protected List<Day> dayList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (dayID == 0 || (dayID == 0 && entryID == 0))
+        {
+            NavigationManager.NavigateTo("admin/agenda");
+        }
+
+        try
+        {
+            await GetDay();
+        }
+
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+    protected async Task GetDay()
+    {
+        dayList = (await Http.GetFromJsonAsync<List<Day>>("api/day")).Where(p => p.DayId == dayID).ToList();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (entryID != 0)
+        {
+            Title = "Editar";
+            Entry = await Http.GetFromJsonAsync<DayEntry>("api/dayentry/" + entryID);
+        }
+    }
+    protected async Task SaveDayEntry()
+    {
+        if (Entry.DayEntryId != 0)
+        {
+            await Http.PutAsJsonAsync("api/dayentry", Entry);
+        }
+        else
+        {
+            Entry.DayId = dayID;
+            await Http.PostAsJsonAsync("api/dayentry", Entry);
+        }
+        Cancel();
+    }
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("admin/agenda/entry/" + dayID);
+    }
+}

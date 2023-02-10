@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <Version>0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorWYDDB23' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.6" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.1" />
+    <PackageReference Include="Blazored.SessionStorage" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.6" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\BlazorWYDDB23.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.Components.WebAssembly.Authentication" />
+    <None Remove="Microsoft.Extensions.Localization" />
+    <None Remove="Resources\" />
+    <None Remove="Extensions\" />
+    <None Remove="Pages\Day %28copy%29\" />
+    <None Remove="Pages\Agenda\" />
+    <None Remove="Pages\Admin\" />
+    <None Remove="Pages\Admin\Agenda\" />
+    <None Remove="Shared\Agenda\" />
+    <None Remove="Blazored.SessionStorage" />
+    <None Remove="Microsoft.AspNetCore.Components.Authorization" />
+    <None Remove="Blazored.LocalStorage" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Pages\Agenda\" />
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\Admin\Agenda\" />
+    <Folder Include="Shared\Agenda\" />
+  </ItemGroup>
+</Project>

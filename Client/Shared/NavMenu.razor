@@ -1,0 +1,50 @@
+﻿@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+
+<nav class="navbar navbar-light navbar-expand-sm py-1 sticky-top" style="background: #038744;">
+    <div class="container">
+        <button class="navbar-toggler" @onclick="ToggleNavMenu" style="background: #f6be18;padding-right: 0.4em;padding-left: 0.4em;">
+            <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand d-flex align-items-center" href="/"><img src="Images/wyd%20logo%20only.png" style="width: 2em; margin-left:0.5em;"></a>
+        <CultureSelector></CultureSelector>
+        <div class="@NavMenuCssClass navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <AuthorizeView>
+                    <Authorized>
+                        <li class="nav-item"><p class="text-yellow mt-1">Olá administrador @context.User.Identity.Name!</p></li>
+                        <li><a class="btn btn-light ms-md-2" role="button" href="/admin/agenda">Admin</a></li>
+                        <li><a class="btn btn-warning ms-md-2" role="button" @onclick="Logout" href="javascript::void(0)">Logout</a></li>
+                    </Authorized>
+                    <NotAuthorized>
+                        <li><a class="btn btn-warning ms-md-2" href="/login">Login</a></li>
+                    </NotAuthorized>
+                </AuthorizeView>
+                <!--
+    <li class="nav-item"><a class="nav-link text-light" href="#">Agenda</a></li>
+    <li class="nav-item"><a class="nav-link text-light" href="#">Mapa</a></li>
+    <li><a class="btn btn-warning ms-md-2" role="button" href="#" style="background: #f6be18;color: var(--bs-navbar-brand-color);">Contacto</a></li>
+        -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task Logout()
+    {
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+        await customAuthStateProvider.UpdateAuthenticationState(null);
+        navManager.NavigateTo("/", true);
+    }
+}
+

@@ -1,0 +1,91 @@
+﻿@page "/admin/agenda"
+@attribute [Authorize]
+@inject HttpClient Http
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navManager
+
+<PageTitle>Admin - Agenda</PageTitle>
+
+<div class="container-md mt-4 p-3">
+    <div class="row">
+        <div class="col">
+            <div class="card rounded-4">
+                <div class="card-body shadow bg-red rounded-4">
+                    <div class="container my-auto text-center">
+                        <div class="col float-end col-4 col-lg-2">
+                            <p class="text-center" style="color: white; font-size: 2em; margin: 4px 0px 4px;"></p>
+                        </div>
+                        <h1 class="mb-1 col-12 text-yellow" style="text-align: left; font-size: 3.2em;">Agenda</h1>
+                        <p class="col-12" style="text-align: left; color: white; font-size: 1.8em; margin: 0px 0px 4px; margin-right: 0;">Editar dias e horários</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5 class="text-center mt-3">Selecione o dia da agenda que pretende editar</h5>
+    <!--
+    <div id="modal-1" class="modal fade" role="dialog" tabindex="-1" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Adicionar Dia</h4><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form><input class="form-control" type="date" /></form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Adicionar</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-2" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar Dia</h4><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem a certeza que quer eliminar o dia <strong>01/08/2023 </strong>? Todas as entradas associadas com este dia serão igualmente eliminadas!</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-danger" type="button">Eliminar</button></div>
+            </div>
+        </div>
+    </div>
+        -->
+    <div class="row mt-4">
+        <BlazorWYDDB23.Client.Shared.Agenda.FetchDayAdmin></BlazorWYDDB23.Client.Shared.Agenda.FetchDayAdmin>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <a class="btn btn-primary float-end ml-2" href="/admin/agenda/day/add">
+                    Adicionar dia
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-plus-square" style="font-size: 22px;">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)authenticationStateProvider;
+        var token = await customAuthStateProvider.GetToken();
+
+        if (!string.IsNullOrEmpty(token))
+        {
+            Http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", token);
+        }
+        else
+        {
+            navManager.NavigateTo("/login");
+        }
+    }
+}
+

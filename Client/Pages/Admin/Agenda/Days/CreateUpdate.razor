@@ -1,0 +1,59 @@
+﻿@page "/admin/agenda/day/add"
+@page "/admin/agenda/day/edit/{ID:int}"
+@using BlazorWYDDB23.Shared.Models
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+<PageTitle>@Title Dia</PageTitle>
+
+<div class="p-3">
+    <h1>@Title Dia</h1>
+    <hr />
+    <EditForm Model="@day" OnValidSubmit="SaveDay">
+        <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="Date" class="form-label">Date</label>
+            <div class="col-md-4">
+                <InputDate class="form-control" @bind-Value="day.Date" />
+            </div>
+            <ValidationMessage For="@(() => day.Date)" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+            <button class="btn btn-light" @onclick="Cancel">Cancelar</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+    protected string Title = "Adicionar";
+    public Day day = new();
+    protected override async Task OnParametersSetAsync()
+    {
+        if (ID != 0)
+        {
+            Title = "Editar";
+            day = await Http.GetFromJsonAsync<Day>("api/day/" + ID);
+        }
+    }
+    protected async Task SaveDay()
+    {
+        if (day.DayId != 0)
+        {
+            await Http.PutAsJsonAsync("api/day", day);
+        }
+        else
+        {
+            await Http.PostAsJsonAsync("api/day", day);
+        }
+        Cancel();
+    }
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/admin/agenda");
+    }
+}

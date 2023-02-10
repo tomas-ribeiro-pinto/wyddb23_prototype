@@ -1,0 +1,13 @@
+﻿@page "/agenda"
+@using BlazorWYDDB23.Shared
+@inject HttpClient Http
+@inject IStringLocalizer<resource> localizer
+
+<PageTitle>@localizer["Agenda"]</PageTitle>
+
+<BlazorWYDDB23.Client.Shared.Agenda.FetchDay></BlazorWYDDB23.Client.Shared.Agenda.FetchDay>
+
+@code {
+
+}
+
