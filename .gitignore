@@ -248,3 +248,6 @@ Shared/obj/Debug/net6.0/BlazorWYDDB23.Shared.assets.cache
 Shared/obj/Debug/net6.0/BlazorWYDDB23.Shared.GeneratedMSBuildEditorConfig.editorconfig
 Shared/obj/project.assets.json
 Shared/obj/project.nuget.cache
+*.cache
+Server/obj/Debug/net6.0/BlazorWYDDB23.Server.csproj.AssemblyReference.cache
+Server/bin/.DS_Store
