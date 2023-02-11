@@ -929,11 +929,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-9+1oBjFTT6qJ7Zu47rPsG7ULPN93eOJ+LAM1kvRpAmM=",
+      "hash": "sha256-nZ30MDf7cNfIJJUHJ8RgK54np62zLx3Q+e8N75UpA8E=",
       "url": "_framework\/BlazorWYDDB23.Shared.dll"
     },
     {
-      "hash": "sha256-zFH2v4PcliXfDliInPuS7y3xKFmrmh61qVbqxld5EaA=",
+      "hash": "sha256-ZGHoTzSA2QTkMp26KkwkWN9Ky57KIYP57R0SYcmc+jc=",
       "url": "_framework\/BlazorWYDDB23.Shared.pdb"
     },
     {
@@ -941,11 +941,11 @@
       "url": "_framework\/en\/BlazorWYDDB23.Shared.resources.dll"
     },
     {
-      "hash": "sha256-x42362xZbsdVuGpKutPWt5VrLDFkXHipP522yIF1ZpM=",
+      "hash": "sha256-2vgup5L7xgpfhS1O4Wvzgbl2D1207IpVlreflScVStI=",
       "url": "_framework\/BlazorWYDDB23.Client.dll"
     },
     {
-      "hash": "sha256-iwXr+I9k6CbKx5guH\/Vz8C6UOcr0ipwzAN1An9ru41w=",
+      "hash": "sha256-b7wayu\/pW+PXS5ugiMCScRMZ3w7OIp\/\/mzpdFNVmgbk=",
       "url": "_framework\/BlazorWYDDB23.Client.pdb"
     },
     {
@@ -953,7 +953,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-eMSTHbDCnyxbecWVPzo1r6gT7Hu3I7WBDnxV27gDR3s=",
+      "hash": "sha256-lO9MxDJ01S2aw953LuPsfb5p+yt\/9SDDeu6qJ6V8z6k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -961,5 +961,5 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     }
   ],
-  "version": "ex8NYiYD"
+  "version": "uBhxQhDC"
 };

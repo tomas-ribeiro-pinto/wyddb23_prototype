@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3VIUGQXE+0us7hooEY++sKVnYnrLxNxycCsGEsPeB7k1JgiJaMlHQdxEh6Khk05eSaKO9tMvYaR/2bofvFcGxA==",
+  "dgSpecHash": "jHTgY2lLtymvqq1R2cYsxHoHWJdJKUwy5m5YZ+R0gmsHk/A1zD5ymGIP73a6IGtffTMGcQThzTynhPPI4uMeNw==",
   "success": true,
-  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj",
+  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

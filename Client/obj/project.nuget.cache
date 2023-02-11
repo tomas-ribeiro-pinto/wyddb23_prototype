@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IHrk+Wc9SnKzAkn12bqs4lPwptrrSOVEVGe/HueRp2IywNXYmVtz+UinxhbDJpvySrIQYqtr5DP9edg+YPm05w==",
+  "dgSpecHash": "NZnjUG+vMgqnOcuE8AzpfaMiTprKcChE8VnR0pPWeqWqIeCwXMbvIhW9I4oVMz3EBhgapoVhgNAAoDhTWMoBpA==",
   "success": true,
-  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Client/BlazorWYDDB23.Client.csproj",
+  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/BlazorWYDDB23.Client.csproj",
   "expectedPackageFiles": [
     "/Users/tomaspinto/.nuget/packages/blazored.localstorage/4.3.0/blazored.localstorage.4.3.0.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/blazored.sessionstorage/2.2.0/blazored.sessionstorage.2.2.0.nupkg.sha512",

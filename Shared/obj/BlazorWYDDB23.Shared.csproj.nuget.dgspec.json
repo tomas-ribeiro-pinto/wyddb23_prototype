@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj": {}
+    "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj": {}
   },
   "projects": {
-    "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj": {
+    "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj",
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
         "projectName": "BlazorWYDDB23.Shared",
-        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/BlazorWYDDB23.Shared.csproj",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
         "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23/Shared/obj/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"

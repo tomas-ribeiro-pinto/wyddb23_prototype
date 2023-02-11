@@ -11,109 +11,109 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorWYDDB23.Client
 build_property.RootNamespace = BlazorWYDDB23.Client
-build_property.ProjectDir = /Users/tomaspinto/Documents/GitHub/wyddb23/Client/
+build_property.ProjectDir = /Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/tomaspinto/Documents/GitHub/wyddb23/Client
+build_property.MSBuildProjectDirectory = /Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/App.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/Days/CreateUpdate.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/Days/CreateUpdate.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0RheXMvQ3JlYXRlVXBkYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/Days/Delete.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/Days/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0RheXMvRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/Entries/CreateUpdate.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/Entries/CreateUpdate.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0VudHJpZXMvQ3JlYXRlVXBkYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/Entries/Delete.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/Entries/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0VudHJpZXMvRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/FetchEntry.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/FetchEntry.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0ZldGNoRW50cnkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Agenda/Index.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Agenda/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQWdlbmRhL0luZGV4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Admin/Login.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Admin/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Agenda/Schedule.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Agenda/Schedule.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWdlbmRhL1NjaGVkdWxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/FetchData.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Hymn.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Hymn.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSHltbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Index.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Map.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Map.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWFwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Post/CreateUpdate.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Post/CreateUpdate.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdC9DcmVhdGVVcGRhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Post/Delete.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Post/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdC9EZWxldGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Pages/Post/FetchPost.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Pages/Post/FetchPost.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdC9GZXRjaFBvc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/Agenda/FetchDay.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/Agenda/FetchDay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0FnZW5kYS9GZXRjaERheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/Agenda/FetchDayAdmin.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/Agenda/FetchDayAdmin.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0FnZW5kYS9GZXRjaERheUFkbWluLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/CultureSelector.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/CultureSelector.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0N1bHR1cmVTZWxlY3Rvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/LoadingComponent.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/LoadingComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvYWRpbmdDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/PostList.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/PostList.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1Bvc3RMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/SurveyPrompt.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/_Imports.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/MainLayout.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-0lftw8gz1z
 
-[/Users/tomaspinto/Documents/GitHub/wyddb23/Client/Shared/NavMenu.razor]
+[/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9i2j9fpehd
