@@ -69,8 +69,28 @@
       "url": "icon-512.png"
     },
     {
+      "hash": "sha256-UAD1okttkWFlGjrgtIlcYkAR+MMLYVjIe39ZuqKSr+8=",
+      "url": "Images\/.DS_Store"
+    },
+    {
+      "hash": "sha256-h59Au\/4MB4dn+89pFfPB\/XRp8A8KWir7WFzEggfZO9o=",
+      "url": "Images\/ensr_mapa.png"
+    },
+    {
+      "hash": "sha256-uWgYE60Kjmob5QfcuJa4QetorYHPg0vjh08Yb3CTBNM=",
+      "url": "Images\/estoril_mapa.png"
+    },
+    {
       "hash": "sha256-aXIdIGTf98h52eL2gYT4xCTmXn0wRK\/zk4ngaTlosIk=",
       "url": "Images\/form.jpg"
+    },
+    {
+      "hash": "sha256-u9ph27\/BBiK\/o5KmdSPRX2jOW5uCXuJCLvGLuVcYbJk=",
+      "url": "Images\/lisboa_mapa.png"
+    },
+    {
+      "hash": "sha256-\/KZ\/ju6sUeRIpiGcISayfGh65HWR5nsslIrluH5ACm4=",
+      "url": "Images\/manique_mapa.png"
     },
     {
       "hash": "sha256-nYp6AdGA1H5aphmRGEhQiW97geHPGqQcX4TDJQDoUWo=",
@@ -129,19 +149,23 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-uNb7xcuwRe4AE2Z8xumXXDl7aHJ8Ta9v16dILdpsjek=",
+      "hash": "sha256-24+hlR7oOUFvuAxSJMdBf1JZsIMDtxMzAz1Ut99XZaY=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-Jq\/dS58mO5wtL2d0x\/FeAdDZ1bUTpTzPODJpBZUre\/4=",
+      "url": "_framework\/Blazored.LocalStorage.dll"
     },
     {
       "hash": "sha256-XkZNIC6OGMeHZDbBGnhfc9yXdLIvGa8LlKDd4ZPWkS8=",
       "url": "_framework\/Blazored.SessionStorage.dll"
     },
     {
-      "hash": "sha256-ejibSgmK4\/p18qhd4UxYTrCk1PevzEYbC3c+TnWPdSg=",
+      "hash": "sha256-0VfFz3TLNgtuC7FI681gaTxHXOyS+spZUcwjQjkawm0=",
       "url": "_framework\/BlazorWYDDB23.Client.dll"
     },
     {
-      "hash": "sha256-i4dKhAKIHGwZ\/ZCBFj8hRCW1iMoOPT5AoFt8wjVC7Fc=",
+      "hash": "sha256-o73CL33ZvbNgTUWa6HxUI6Pyw78+mgrxFIKPHr0FvhU=",
       "url": "_framework\/BlazorWYDDB23.Shared.dll"
     },
     {
@@ -265,6 +289,10 @@
       "url": "_framework\/System.ComponentModel.TypeConverter.dll"
     },
     {
+      "hash": "sha256-efkxZqeJ9datQYlZa6R0JLI\/67\/8rmOPsV4W7nLl2ns=",
+      "url": "_framework\/System.Console.dll"
+    },
+    {
       "hash": "sha256-ea6PgO0lAlHD+YoGgHQDDMLLg9HXzm8\/+NYzOQR67Gc=",
       "url": "_framework\/System.dll"
     },
@@ -297,7 +325,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-Tv80FC5PvWiqF20tY0sX\/P4QC3CoTxXaEh7NGHw6+CU=",
+      "hash": "sha256-LbSOGPMG2iEimyJBlGSaOrYCClSg4rAaUWXcwtnudnI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -349,5 +377,5 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     }
   ],
-  "version": "\/ahcsLDw"
+  "version": "TAE44Q4A"
 };
