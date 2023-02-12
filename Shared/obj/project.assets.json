@@ -8,25 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/tomaspinto/.nuget/packages/": {}
+    "C:\\Users\\tomaspinto\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
+      "projectUniqueName": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj",
       "projectName": "BlazorWYDDB23.Shared",
-      "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
-      "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-      "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/obj/",
+      "projectPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj",
+      "packagesPath": "C:\\Users\\tomaspinto\\.nuget\\packages\\",
+      "outputPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\tomaspinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/x64/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\x64\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

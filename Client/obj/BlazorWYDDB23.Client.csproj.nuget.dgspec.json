@@ -1,34 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/BlazorWYDDB23.Client.csproj": {}
+    "Z:\\Documents\\GitHub\\wyddb23_prototype\\Client\\BlazorWYDDB23.Client.csproj": {}
   },
   "projects": {
-    "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/BlazorWYDDB23.Client.csproj": {
+    "Z:\\Documents\\GitHub\\wyddb23_prototype\\Client\\BlazorWYDDB23.Client.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/BlazorWYDDB23.Client.csproj",
+        "projectUniqueName": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Client\\BlazorWYDDB23.Client.csproj",
         "projectName": "BlazorWYDDB23.Client",
-        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/BlazorWYDDB23.Client.csproj",
-        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Client/obj/",
+        "projectPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Client\\BlazorWYDDB23.Client.csproj",
+        "packagesPath": "C:\\Users\\tomaspinto\\.nuget\\packages\\",
+        "outputPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tomaspinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/x64/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj": {
-                "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj"
+              "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj": {
+                "projectPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj"
               }
             }
           }
@@ -86,7 +87,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.6, 6.0.6]"
+              "version": "[6.0.2, 6.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -94,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\x64\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -103,23 +104,24 @@
         }
       }
     },
-    "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj": {
+    "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
+        "projectUniqueName": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj",
         "projectName": "BlazorWYDDB23.Shared",
-        "projectPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/BlazorWYDDB23.Shared.csproj",
-        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-        "outputPath": "/Users/tomaspinto/Documents/GitHub/wyddb23_prototype/Shared/obj/",
+        "projectPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\BlazorWYDDB23.Shared.csproj",
+        "packagesPath": "C:\\Users\\tomaspinto\\.nuget\\packages\\",
+        "outputPath": "Z:\\Documents\\GitHub\\wyddb23_prototype\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tomaspinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/x64/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -152,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\x64\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
