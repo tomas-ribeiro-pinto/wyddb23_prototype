@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlazorWYDDB23.Server.Migrations
 {
-    public partial class devTestadmin : Migration
+    public partial class InitialCommit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -55,7 +55,7 @@ namespace BlazorWYDDB23.Server.Migrations
                         column: x => x.DayId,
                         principalTable: "Days",
                         principalColumn: "DayId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

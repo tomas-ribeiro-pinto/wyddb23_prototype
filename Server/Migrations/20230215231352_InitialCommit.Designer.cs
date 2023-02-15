@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorWYDDB23.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230201224934_devTestadmin2")]
-    partial class devTestadmin2
+    [Migration("20230215231352_InitialCommit")]
+    partial class InitialCommit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

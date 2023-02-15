@@ -9,8 +9,7 @@ namespace BlazorWYDDB23.Server.Authentication
 		{
 			_userAccountList = new List<UserAccount>
 			{
-				new UserAccount{ UserName = "pastoralsalesianos", Password = "admin", Role = "Administrator"},
-				new UserAccount{ UserName = "tomaspinto", Password = "admin", Role = "Administrator"}
+				new UserAccount{ UserName = "admin", Password = "admin", Role = "Administrator"}
             };
 		}
 
