@@ -5,7 +5,7 @@ WYD Don Bosco 2023 APP Prototype Idea
 
 ## Description
 
-WYDDB23 Prototype APP is a [Progressive Web Application](https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0&tabs=visual-studio) (PWA) written in C# using [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) Web Assembly and Microsoft's ASP .NET framework. The aim of this prototype is to provide a prospective feel of a simple application for an event that can be installed on local device for offline use. It has a built-in agenda that fetches data from an RESTful API hosted on the backend of this Blazor Web Assembly App.
+WYDDB23 Prototype APP is a [Progressive Web Application](https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0&tabs=visual-studio) (PWA) written in C# using [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) Web Assembly and Microsoft's ASP .NET framework. The aim of this prototype is to provide a prospective feel of a simple application for an event that can be installed on local device for offline use. It has a built-in agenda that fetches data from a REST API hosted on the backend of this Blazor Web Assembly App.
 
 > This application prototype is a partially working system for demonstration purpose only and does not reflect a final release or a official product of the brand WYD Don Bosco 23. 
 
